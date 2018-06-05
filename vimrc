@@ -1,9 +1,8 @@
-" Functions
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
+" Pathogen
+" Need to have pathogen installed by running:
+" mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+" curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+execute pathogen#infect()
 
 " Syntax
 syntax on
@@ -32,6 +31,5 @@ set showmatch
 " Status
 set laststatus=2
 set statusline=
-"set statusline+=%{StatuslineGit()}
-set statusline+=%f\ %y\ %=\ line:\ %l/%L\ col:\ %c
+set statusline+=%{FugitiveStatusline()}\ %f\ %y\ %=\ line:\ %l/%L\ col:\ %c
 
