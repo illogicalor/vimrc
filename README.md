@@ -12,3 +12,5 @@ but here are a few to start with:
 
 * <https://github.com/tpope/vim-fugitive>
 * <https://vimawesome.com/plugin/nerdtree-red>
+* <https://github.com/wincent/command-t/blob/master/doc/command-t.txt>
+    * You may need to run `rake make` in the repo to load C extensions.
